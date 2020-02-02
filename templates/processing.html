@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Process your image</title>
+   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+ 
+   <link href="../static/mystyle.css" rel="stylesheet">
+ 
+   <meta charset="utf-8">
+ 
+   <!-- jQuery library -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ 
+   <!-- Latest compiled JavaScript -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+ 
+<style>
+ 
+    * {
+        background-color: #001628 !important;
+        color: #fff;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+ 
+    .active {
+        color: #fff !important;
+        background-color: #001628 !important;
+        border: 2px solid #ff4b4b !important;
+        border-radius: 8px;
+    }
+
+</style>
+</head>
+<body>
+   <div class="container">
+       <div class="header">
+           <nav>
+               <ul class="nav nav-pills pull-right">
+                    <li role="presentation" class="active"><a href="/">Home</a>
+                   </li>
+               </ul>
+           </nav>
+           
+       </div>
+        <div id="image-container">
+           <img src=" {{url_for('send_image', filename=image_name)}} " style="max-width: 750px;">
+           </div>
+       <div class="row marketing">
+           <div class="col-lg-6">
+               <form id="form-flip" action="{{ url_for('flip') }}" method="POST" enctype="multipart/form-data">       
+                 <button id="btnFlipH" class="btn btn-lg btn-success" type="submit" name="mode" value="horizontal">Go to the Year 2100</button>
+             <input type="text" class="hidden" name="image" value="{{ image_name }}"> 
+ 
+               </form>
+              
+           </div>
+       </div>
+   </div>
+</body>
+</html>
+ 
+

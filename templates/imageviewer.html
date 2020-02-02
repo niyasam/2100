@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+ 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      
+        <title>Hoya Weather Report</title>
+      
+        <link rel="stylesheet" href="/static/imageviewer.css">
+        
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+
+      
+     </head>
+     
+<body>
+    <nav class="row" style="background: #337ab7; color: white;">
+        <h1 class="col-md-3 text-center">Predictive Climate Modeling</h1>
+        <h2 class="col-md-3 text-center">Enter a location to see current and future conditions.</h2>
+      </nav>
+      <br />
+      <br />
+      <center class="row">
+        <form method="post" class="col-md-6 col-md-offset-3">
+          <div class="input-group">
+            <input type="text" class="form-control" name="city" placeholder="Search Location">
+
+            <form>
+      </center>
+              <div class="row">
+                {% if data.country_code and data.coordinate and data.temp and data.pressure and data.humidity %}
+                <div class="col-md-6 col-md-offset-3">
+                  <br>
+                  <h2>Today's Conditions</h2>
+                  <br>
+                  <h2>Country : {{data.country_code}}</h2>
+                  <h3>Location : {{data.name}}</h3>
+                  
+                  <h3>Coordinates : {{data.coordinate}}</h3>
+                  <h3>Current Temperature : {{data.temp}} F</h3>
+                  <h3>Current Sea Pressure : {{data.pressure}} hPa </h3>
+                  <h3>Current Humidity : {{data.humidity}} % </h3>
+                  <br>
+                  <h2>Conditions in 2100</h2>
+                  <br>
+                  <div class="updated">
+                    <h3>Future Temperature : {{data.futuretemp}} F</h3>
+                    <h3>Future Sea Pressure : {{data.futurepressure}} hPa</h3>
+                    <h3>Predicted Sea Level Rise : + {{data.predictedsealevel}} ft</h3>
+                  </div>
+                  <br>
+                  <br>
+                  <br>
+                  <div class="link">
+                    <h5> Predictions made referencing the <a href="http://www.copenhagendiagnosis.org/default.html">Copenhagen Diagnosis</a> and <a href="https://www.climateinteractive.org/tools/c-roads">C-ROADS Climate Policy Model.</a></h5>
+                  </div>
+
+
+                </div>
+                {% endif %}
+              </div>
+         
+</body>
+</html>

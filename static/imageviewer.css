@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Poppins&display=swap');
+
+* {
+    background-color: #001628;
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    color: #fff !important;
+    font-family: Montserrat;
+
+}
+.updated h3 {
+    color: #00CED1 !important;
+}
+
+.row h1 {
+    font-size: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 10px 20px 10px;
+}
+
+.row p {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 50px 10px 20px;
+    color: grey !important;
+}
+
+.search-container{
+    width: 490px;
+    display: block;
+    margin: 20px auto;
+  }
+  
+  input#search-bar{
+    margin: 0px auto;
+    width: 100%;
+    height: 45px;
+    padding: 0 20px;
+    font-size: 1rem;
+    border: 1px solid #fff;
+    outline: none;
+    &:focus{
+      border: 1px solid #fff;
+      transition: 0.35s ease;
+      color: #fff;
+      &::-webkit-input-placeholder{
+        transition: opacity 0.45s ease; 
+          opacity: 1;
+       }
+      &::-moz-placeholder {
+        transition: opacity 0.45s ease; 
+          opacity: 1;
+       }
+      &:-ms-placeholder {
+       transition: opacity 0.45s ease; 
+         opacity: 1;
+       }    
+     }
+   }
+  
+  .search-icon{
+    position: relative;
+    float: right;
+    width: 75px;
+    height: 75px;
+    top: -62px;
+    right: -45px;
+  }
+
+  .link a {
+      text-decoration: none;
+      color: #ff4b4b !important;
+  }
+  
+  .link a:hover {
+      transition: east-in 1s all;
+      text-decoration: none;
+      color: #fff !important;
+  }
+
+  .form-control {
+      font-size:15px;
+      padding: 5px 25px 5px 25px;
+  }

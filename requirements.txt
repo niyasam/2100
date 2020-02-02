@@ -1,0 +1,7 @@
+Pillow
+Flask
+gunicorn
+requests[security]
+numpy
+json
+urllib2

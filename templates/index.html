@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ 
+ <title>Hoya Hack 2020</title>
+ 
+ <link rel="stylesheet" href="/static/mystyle.css">
+ 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.min.css">
+ 
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+ 
+</head>
+ 
+<body>
+ 
+ <div id="fullPage">
+ 
+   <div class="section s1">
+     <div class="container">
+       <p style="color: gray;"> Year 2100<span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
+     </div>
+     <div class="middle">
+       <div class="mouse">
+       </div>
+     </div>
+   </div>
+ 
+   <div class="section s2">
+           <header>
+               <div class="about">
+                   <h1>See the Numbers</h1>
+                   <p>Climate Change poses a fundamental threat to our habitat. Examine the data yourself! </p>
+               </div>
+           </header>
+           <a href="{{ url_for('imageviewer') }}" target="_blank" class="button1">See Weather</a>
+ 
+                
+   </div>
+ 
+   <div class="section s3">
+ 
+           <header>
+                   <div class="about">
+                     <h1>See the Change</h1>
+                     <p>Want to see what your neighborhood would look like in 2100? Go ahead and upload an image by clicking on the button.</p>
+                   </div>
+                 </header>
+                 <p class="lead"></p>
+                      <form id="btn" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+                       <input id="btn" type="file" name="file" accept="image/*" onchange="this.form.submit()">
+                       <label for="file-picker" class="btn"></label>
+                    </form>
+   </div>
+ 
+   <div class="section s4">
+     <header>
+       <div class="about">
+         <h1>See What You Can Do</h1>
+         <p>There are tons of ways that you can make a difference today. Find current bills in Congress that you can help support in order to fight climate change and make a difference. Click the link to get started today!</p>
+       </div>
+     </header>
+     <a href="{{ url_for('bills') }}" target="_blank" class="button1">Get Started</a>
+    
+     <footer>
+       <p class="footer">Adnaan Dasoo <span>|</span> Mohammed Niyas <span>|</span> Wafeeq Iqbal</p>
+     </footer>
+   </div>
+ 
+ </div>
+ 
+ <div class="loader-wrapper">
+   <div class="pulse"></div>
+ </div>
+ 
+ <script>
+   $(window).on("load", function() {
+     $(".loader-wrapper").fadeOut("slow");
+   });
+ </script>
+ 
+ <script type="text/javascript">
+   TweenMax.from(".container", 2, {
+     delay: 0,
+     y: 1000,
+     opacity: 0,
+     ease: Expo.easeInOut
+   })
+ 
+   TweenMax.from(".middle", 2, {
+     delay: 1,
+     y: 10,
+     opacity: 0,
+     ease: Expo.easeInOut
+   })
+ </script>
+ 
+ <script src="/static/main.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.min.js"></script>
+ 
+ <script>
+   new fullpage('#fullPage', {
+     autoScrolling: true,
+     keyboardScrolling: true,
+     navigation: true,
+   })
+ </script>
+ 
+ 
+</body>
+ 
+</html>
+

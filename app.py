@@ -6,8 +6,7 @@ from PIL import Image
 import numpy as np
 import json
 # urllib.request to make a request to api
-import urllib2
-from urllib2 import urlopen
+import urllib.request
 
 
 
@@ -34,7 +33,7 @@ def imageviewer():
         city = 'washington'
     
     # source contain json data from api
-    source = urllib2.urlopen('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=imperial&appid=3011b303e0f1a936b399b9b7e007f3f4').read()
+    source = urllib.request.urlopen( 'http://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=imperial&appid=3011b303e0f1a936b399b9b7e007f3f4').read()
 
     # converting json data to dictionary
 

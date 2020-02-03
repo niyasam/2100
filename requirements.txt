@@ -3,3 +3,5 @@ Flask
 gunicorn
 requests[security]
 numpy
+urllib
+urllib2

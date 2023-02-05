@@ -8,6 +8,7 @@ The image you upload is transformed and modified to show you what it might look 
 
 
 The Homepage
+
 ![Homepage](original.gif)
 
 Before

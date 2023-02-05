@@ -1,7 +1,20 @@
 # 2100
-hoyahacks hackathon project - The Year 2100. see https://devpost.com/software/2100 for more information. Try our website below. (laptop version works better than mobile (jpg, png images supported only.))
+https://devpost.com/software/2100 
 
-https://theyear2100.herokuapp.com/
+The Year 2100 - showing you your own future.
+
+A Flask app where you upload an image of your neighborhood (anything outside basically) and input location data that fetches weather data via an API. 
+The image you upload is transformed and modified to show you what it might look in 2100.
+
+![Homepage](original.gif)
+
+
+![before](gallery.jpeg)
+
+
+![after](gallery2.jpeg)
+
+
 
 
 Special thank you to gxercavins. We used his public repo as a base to learn Flask and Image Modification API's 

@@ -11,9 +11,12 @@ The Homepage
 
 ![Homepage](original.gif)
 
-Before and After
+Before 
 
 ![before](gallery.jpeg) 
+
+After
+
 ![after](gallery3.jpeg)
 
 

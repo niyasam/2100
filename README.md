@@ -11,14 +11,10 @@ The Homepage
 
 ![Homepage](original.gif)
 
-Before
+Before and After
 
-![before](gallery.jpeg)
-
-After
-
-![after](gallery2.jpeg)
-
+![before](gallery.jpeg) 
+![after](gallery3.jpeg)
 
 
 
